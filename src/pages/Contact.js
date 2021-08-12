@@ -79,6 +79,7 @@ const Contact = () => {
         setName("")
         setEmail("")
         setPhoneNumber('')
+        setMessage('')
         setSelection([])
         setChecked(false)
         setIsChecked(false)
