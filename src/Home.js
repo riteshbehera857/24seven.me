@@ -8,6 +8,8 @@ import Breeding from './pages/Breeding';
 import Sitting from './pages/Sitting';
 import DayCare from './pages/DayCare';
 import PetTaxi from './pages/PetTaxi';
+import Contact from './pages/Contact'
+import Footer from './pages/Footer';
 
 
 const Home = () => {
@@ -22,6 +24,8 @@ const Home = () => {
             <Sitting />
             <DayCare />
             <PetTaxi />
+            <Contact />
+            <Footer />
         </>
     )
 }

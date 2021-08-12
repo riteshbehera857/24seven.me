@@ -1,9 +1,10 @@
 import React from 'react'
 import Button from '../Components/Button'
+import { Link } from 'react-scroll'
 
 const Training = () => {
     return (
-        <div className="training">
+        <div id="training" className="training">
 
             <div className="training__text">
                 <h1 className="training__heading">
@@ -14,7 +15,9 @@ const Training = () => {
                     And, no matter your pet’s age, training is an excellent way to create and grow the trust and bond between you and your canine or feline counterpart
                 </p>
                 <div className="training__cta">
-                    <Button content={"About Us"} />
+                    <Link smooth={true} to="breeding">
+                        <Button content={"Submit"} />
+                    </Link>
                 </div>
             </div>
             <img className="training__img" src="/images/training.svg" alt="" />
