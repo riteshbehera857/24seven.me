@@ -48,12 +48,23 @@ const names = [
     'Farm Animals',
 ]
 
+const locations = [
+    'Kuwait',
+    'Bahrain',
+    'United Arab Emirates',
+    'Saudi Arabia',
+    'Qatar',
+    'Oman',
+    'India'
+]
+
 const Contact = () => {
     const classes = useStyles();
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
     const [selection, setSelection] = useState([])
+    const [location, setLocation] = useState('')
     const [message, setMessage] = useState('')
     const [checked, setChecked] = useState(false)
     const [isChecked, setIsChecked] = useState(false)
@@ -71,6 +82,7 @@ const Contact = () => {
             phone: parseInt(phoneNumber, 10),
             message: message,
             pet: selection,
+            location: location,
             pet_parent: checked,
             pet_lover: isChecked
         }).then(
@@ -81,6 +93,7 @@ const Contact = () => {
         setPhoneNumber('')
         setMessage('')
         setSelection([])
+        setLocation('')
         setChecked(false)
         setIsChecked(false)
     }
@@ -149,17 +162,21 @@ const Contact = () => {
                                 {name}
                             </MenuItem>
                         ))}
-
-                        {/* <MenuItem value={'bird'}>Bird</MenuItem>
-                        <MenuItem value={'cat'}>Cat</MenuItem>
-                        <MenuItem value={'dog'}>Dog</MenuItem>
-                        <MenuItem value={'fish'}>Fish</MenuItem>
-                        <MenuItem value={'falcon'}>Falcon </MenuItem>
-                        <MenuItem value={'reptiles'}>Reptiles </MenuItem>
-                        <MenuItem value={'small animal'}>Small Animal </MenuItem>
-                        <MenuItem value={'horse'}>Horse </MenuItem>
-                        <MenuItem value={'farm animals'}>Farm Animals </MenuItem> */}
-
+                    </Select>
+                </FormControl>
+                <FormControl className={classes.formControl1}>
+                    <InputLabel>Location</InputLabel>
+                    <Select
+                        labelId="Select"
+                        value={location}
+                        required
+                        onChange={e => setLocation(e.target.value, location)}
+                    >
+                        {locations.map((location) => (
+                            <MenuItem key={location} value={location}>
+                                {location}
+                            </MenuItem>
+                        ))}
                     </Select>
                 </FormControl>
                 <FormControl className={classes.formControl2}>

@@ -594,7 +594,7 @@ footer a:not(:last-child){
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .coming__soon{
@@ -610,11 +610,15 @@ footer a:not(:last-child){
   justify-content: space-between;
 }
 
-.social__app button{
-  text-transform: uppercase;
-  padding: .8rem 2rem;
+.social__app img{
+  width: 10rem;
 }
 
-.social__app button:not(:last-child){
-  margin-right: 2rem;
+footer img{
+  width: 3rem;
 }
+
+.youtube{
+  width: 3.7rem;
+}
+
